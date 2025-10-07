@@ -1,0 +1,16 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Cart</title><link rel='stylesheet' href='css/style.css'></head><body>
+<header class="site-header container"><div class="site-title"><img src="https://raw.githubusercontent.com/grind-pro-store/site/main/logo.png" alt="GRIND PRO logo"><span>GRIND PRO</span></div><nav class="site-nav"><a href="index.html">Home</a><a href="index.html#shop">Shop</a><a href="contact.html">Contact</a></nav><div style="display:flex;gap:10px;align-items:center"><a href="cardlist.html" style="text-decoration:none;color:var(--text)"><button class="icon-btn">💼 <span id="wish-count" style="font-size:12px">0</span></button></a><a href="cart.html" style="text-decoration:none;color:var(--text)"><button class="icon-btn">🛒 <span id="cart-count" style="font-size:12px">0</span></button></a></div></header>
+<main class="container" style="padding:24px 0">
+  <h1>Your Cart</h1>
+  <table class="table" style="margin-top:12px">
+    <thead><tr><th>Product</th><th>Details</th><th>Price</th><th>Qty</th><th>Subtotal</th><th></th></tr></thead>
+    <tbody id="cart-body"></tbody>
+  </table>
+  <div style="margin-top:12px;text-align:right"><strong>Total: <span id="cart-total">0 DA</span></strong></div>
+  <div style="margin-top:12px;text-align:right"><a href="index.html" class="btn-action btn-primary">Continue Shopping</a></div>
+</main>
+<footer class="footer">© GRIND PRO</footer>
+<script>document.addEventListener('DOMContentLoaded',function(){renderCart(document.getElementById('cart-body'),document.getElementById('cart-total'));});</script>
+<script src="js/main.js"></script>
+
+</body></html>
