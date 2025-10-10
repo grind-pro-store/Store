@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Demi veste</title><link href="css/style.css" rel="stylesheet"/></head><body>
 <header class="site-header container"><div class="site-title"><img alt="GRIND PRO logo" src="https://raw.githubusercontent.com/grind-pro-store/site/main/logo.png"/><span>GRIND PRO</span></div><nav class="site-nav"><a href="index.html">Home</a><a href="contact.html">Contact</a></nav><div style="display:flex;gap:10px;align-items:center"><a href="cart.html" style="text-decoration:none;color:var(--text)"><a href="cart.html" style="text-decoration:none;color:var(--text)"><button class="icon-btn">🛒 <span id="cart-count" style="font-size:12px">0</span></button></a></a></div></header>
 <main class="container">
@@ -16,7 +17,7 @@
 <div style="margin-top:12px"><strong>Taille:</strong><div class="size-row" style="margin-top:8px"><button class="option-button disabled" data-size="S">S</button><button class="option-button active" data-size="M">M</button><button class="option-button disabled" data-size="L">L</button></div></div>
 <div class="btn-row">
 <button class="btn-action btn-primary" onclick="handleAddToCart(this)">Ajouter au panier</button>
-<button class="btn-action btn-cardlist" onclick="handleAddToCardList(this)">Liste de souhaits</button>
+<button class="btn-action btn-cardlist" onclick="window.location.href='cart.html'">Liste de souhaits</button>
 <button class="btn-action btn-secondary btn-buy">Acheter</button>
 </div>
 <div class="product-tabs" style="margin-top:16px">
