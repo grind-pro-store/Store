@@ -1,5 +1,5 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tricot simple demi manche</title><link rel="stylesheet" href="../css/style.css"></head><body>
-<header class="site-header container"><div class="site-title"><img src="https://raw.githubusercontent.com/grind-pro-store/site/main/logo.png" alt="GRIND PRO logo"><span>GRIND PRO</span></div><nav class="site-nav"><a href="index.html">Accueil</a><a href="index.html#shop"></a><a href="contact.html">Contact</a></nav><div style="display:flex;gap:10px;align-items:center"><a href="cardlist.html" style="text-decoration:none;color:var(--text)"><button class="icon-btn">💼 <span id="wish-count" style="font-size:12px">0</span></button></a><a href="cardlist.html" style="text-decoration:none;color:var(--text)"></div></header>
+<header class="site-header container"><div class="site-title"><img src="https://raw.githubusercontent.com/grind-pro-store/site/main/logo.png" alt="GRIND PRO logo"><span>GRIND PRO</span></div><nav class="site-nav"><a href="index.html">Home</a><a href="contact.html">Contact</a></nav><div style="display:flex;gap:10px;align-items:center"><a href="cart.html" style="text-decoration:none;color:var(--text)"><button class="icon-btn"> <span id="wish-count" style="font-size:12px">0</span></button></a><a href="cart.html" style="text-decoration:none;color:var(--text)"><button class="icon-btn">🛒 <span id="cart-count" style="font-size:12px">0</span></button></a></div></header>
 <main class="container">
   <section class="product-page" data-product="tricot_simple" data-price="1200">
     <div class="product-gallery">
@@ -14,7 +14,7 @@
       <div style="margin-top:12px"><strong>Couleur:</strong><div class="size-row" style="margin-top:8px"><button data-color data-group="color-tricot_simple" data-color="Noire" data-src="https://raw.githubusercontent.com/grind-pro-store/site/main/tricot%20n.png" class="option-button active">Noire</button><button data-color data-group="color-tricot_simple" data-color="Bleu" data-src="https://raw.githubusercontent.com/grind-pro-store/site/main/tricot%20b.png" class="option-button">Bleu</button></div></div>
       <div style="margin-top:12px"><strong>Taille:</strong><div class="size-row" style="margin-top:8px"><button data-size data-size="S" class="option-button disabled">S</button><button data-size data-size="M" class="option-button active" data-size="M">M</button><button data-size data-size="L" class="option-button disabled" data-size="L">L</button></div></div>
       <div class="btn-row">
-        <button class="btn-action btn-primary" onclick="handleAddToPanier(this)">Ajouter au panier</button>
+        <button class="btn-action btn-primary" onclick="handleAddToCart(this)">Ajouter au panier</button>
         <button class="btn-action btn-cardlist" onclick="handleAddToCardList(this)">Liste de souhaits</button>
         <button class="btn-action btn-secondary btn-buy">Acheter</button>
       </div>
@@ -26,7 +26,7 @@
   </section>
 </main>
 <footer class="footer">© GRIND PRO</footer>
-<script>document.addEventListener('DOMContentLoaded',function(){initProduitUI(document);});</script>
+<script>document.addEventListener('DOMContentLoaded',function(){initProductUI(document);});</script>
 <script src="../js/main.js"></script>
 
 <!-- Modal d'achat -->
@@ -42,8 +42,8 @@
       <input type="hidden" name="Livraison" id="pf_delivery" value="">
       <input type="hidden" name="Total (DZD)" id="pf_total" value="">
       <div class="form-row">
-        <label for="fullNom">Nom complet</label>
-        <input id="fullNom" name="Nom complet" required>
+        <label for="fullName">Nom complet</label>
+        <input id="fullName" name="Nom complet" required>
       </div>
       <div class="form-row">
         <label for="email">Email</label>
