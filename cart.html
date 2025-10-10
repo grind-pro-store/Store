@@ -1,68 +1,66 @@
-<!doctype html><html lang='fr'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Cart</title><link rel='stylesheet' href='css/style.css'></head><body>
-<header class="site-header container"><div class="site-title"><img src="https://raw.githubusercontent.com/grind-pro-store/site/main/logo.png" alt="GRIND PRO logo"><span>GRIND PRO</span></div><nav class="site-nav"><a href="index.html">Home</a><a href="contact.html">Contact</a></nav><div style="display:flex;gap:10px;align-items:center"><a href="cart.html" style="text-decoration:none;color:var(--text)"><a href="cart.html" style="text-decoration:none;color:var(--text)"></div></header>
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Cart</title><link href="css/style.css" rel="stylesheet"/></head><body>
+<header class="site-header container"><div class="site-title"><img alt="GRIND PRO logo" src="https://raw.githubusercontent.com/grind-pro-store/site/main/logo.png"/><span>GRIND PRO</span></div><nav class="site-nav"><a href="index.html">Home</a><a href="contact.html">Contact</a></nav><div style="display:flex;gap:10px;align-items:center"><a href="cart.html" style="text-decoration:none;color:var(--text)"><a href="cart.html" style="text-decoration:none;color:var(--text)"></a></a></div></header>
 <main class="container" style="padding:24px 0">
-  <h1>Your Cart</h1>
-  <table class="table" style="margin-top:12px">
-    <thead><tr><th>Product</th><th>Details</th><th>Price</th><th>Qty</th><th>Subtotal</th><th></th></tr></thead>
-    <tbody id="cart-body"></tbody>
-  </table>
-  <div style="margin-top:12px;text-align:right"><strong>Total: <span id="cart-total">0 DA</span></strong></div>
-  <div style="margin-top:12px;text-align:right"><a href="index.html" class="btn-action btn-primary">Continue Shopping</a></div>
+<h1>Your Cart</h1>
+<table class="table" style="margin-top:12px">
+<thead><tr><th>Product</th><th>Details</th><th>Price</th><th>Qty</th><th>Subtotal</th><th></th></tr></thead>
+<tbody id="cart-body"></tbody>
+</table>
+<div style="margin-top:12px;text-align:right"><strong>Total: <span id="cart-total">0 DA</span></strong></div>
+<div style="margin-top:12px;text-align:right"><a class="btn-action btn-primary" href="index.html">Continue Shopping</a></div>
 </main>
 <footer class="footer">© GRIND PRO</footer>
 <script>document.addEventListener('DOMContentLoaded',function(){renderCart(document.getElementById('cart-body'),document.getElementById('cart-total'));});</script>
 <script src="js/main.js"></script>
-
-
 <!-- Modal d'achat -->
-<div id="purchaseModal" class="purchase-modal" aria-hidden="true">
-  <div class="purchase-modal-content" role="dialog" aria-modal="true" aria-labelledby="purchaseTitle">
-    <button class="close-modal" id="closePurchaseModal" aria-label="Fermer">✕</button>
-    <h2 id="purchaseTitle">Formulaire de commande</h2>
-    <form id="purchaseForm" method="POST" action="https://formsubmit.co/adlnmhd2002@gmail.com?_next=https://yourdomain.com/merci.html" >
-      <input type="hidden" name="_subject" value="Nouvelle commande - GRIND PRO">
-      <input type="hidden" name="Produit" id="pf_product" value="">
-      <input type="hidden" name="Couleur" id="pf_color" value="">
-      <input type="hidden" name="Taille" id="pf_size" value="">
-      <input type="hidden" name="Livraison" id="pf_delivery" value="">
-      <input type="hidden" name="Total (DZD)" id="pf_total" value="">
-      <div class="form-row">
-        <label for="fullName">Nom complet</label>
-        <input id="fullName" name="Nom complet" required>
-      </div>
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input id="email" name="Email" type="email" required>
-      </div>
-      <div class="form-row">
-        <label for="phone">Téléphone</label>
-        <input id="phone" name="Téléphone" required>
-      </div>
-      <div class="form-row">
-        <label for="address">Adresse complète</label>
-        <input id="address" name="Adresse complète" required>
-      </div>
-      <div class="form-row">
-        <label>Mode de livraison</label>
-        <div>
-          <label><input type="radio" name="delivery_option" value="600" required> À domicile (600 DZD)</label><br>
-          <label><input type="radio" name="delivery_option" value="400"> Au bureau (400 DZD)</label>
-        </div>
-      </div>
-      <div class="form-row">
-        <label>Total</label>
-        <div id="displayTotal">---</div>
-      </div>
-      <div class="form-row">
-        <label for="notes">Remarques / Informations supplémentaires</label>
-        <textarea id="notes" name="Remarques" rows="3"></textarea>
-      </div>
-      <div class="form-actions">
-        <button type="submit" class="btn-primary">Envoyer la commande</button>
-      </div>
-    </form>
-  </div>
+<div aria-hidden="true" class="purchase-modal" id="purchaseModal">
+<div aria-labelledby="purchaseTitle" aria-modal="true" class="purchase-modal-content" role="dialog">
+<button aria-label="Fermer" class="close-modal" id="closePurchaseModal">✕</button>
+<h2 id="purchaseTitle">Formulaire de commande</h2>
+<form action="https://formsubmit.co/adlnmhd2002@gmail.com?_next=https://yourdomain.com/merci.html" id="purchaseForm" method="POST">
+<input name="_subject" type="hidden" value="Nouvelle commande - GRIND PRO"/>
+<input id="pf_product" name="Produit" type="hidden" value=""/>
+<input id="pf_color" name="Couleur" type="hidden" value=""/>
+<input id="pf_size" name="Taille" type="hidden" value=""/>
+<input id="pf_delivery" name="Livraison" type="hidden" value=""/>
+<input id="pf_total" name="Total (DZD)" type="hidden" value=""/>
+<div class="form-row">
+<label for="fullName">Nom complet</label>
+<input id="fullName" name="Nom complet" required=""/>
 </div>
-
+<div class="form-row">
+<label for="email">Email</label>
+<input id="email" name="Email" required="" type="email"/>
+</div>
+<div class="form-row">
+<label for="phone">Téléphone</label>
+<input id="phone" name="Téléphone" required=""/>
+</div>
+<div class="form-row">
+<label for="address">Adresse complète</label>
+<input id="address" name="Adresse complète" required=""/>
+</div>
+<div class="form-row">
+<label>Mode de livraison</label>
+<div>
+<label><input name="delivery_option" required="" type="radio" value="600"/> À domicile (600 DZD)</label><br/>
+<label><input name="delivery_option" type="radio" value="400"/> Au bureau (400 DZD)</label>
+</div>
+</div>
+<div class="form-row">
+<label>Total</label>
+<div id="displayTotal">---</div>
+</div>
+<div class="form-row">
+<label for="notes">Remarques / Informations supplémentaires</label>
+<textarea id="notes" name="Remarques" rows="3"></textarea>
+</div>
+<div class="form-actions">
+<button class="btn-primary" type="submit">Envoyer la commande</button>
+</div>
+</form>
+</div>
+</div>
 <script src="js/purchase.js"></script>
 </body></html>
