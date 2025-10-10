@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Cart</title><link href="css/style.css" rel="stylesheet"/></head><body>
 <header class="site-header container"><div class="site-title"><img alt="GRIND PRO logo" src="https://raw.githubusercontent.com/grind-pro-store/site/main/logo.png"/><span>GRIND PRO</span></div><nav class="site-nav"><a href="index.html">Home</a><a href="contact.html">Contact</a></nav><div style="display:flex;gap:10px;align-items:center"><a href="cart.html" style="text-decoration:none;color:var(--text)"><a href="cart.html" style="text-decoration:none;color:var(--text)"></a></a></div></header>
 <main class="container" style="padding:24px 0">
@@ -8,7 +9,7 @@
 <tbody id="cart-body"></tbody>
 </table>
 <div style="margin-top:12px;text-align:right"><strong>Total: <span id="cart-total">0 DA</span></strong></div>
-<div style="margin-top:12px;text-align:right"><a class="btn-action btn-primary" href="index.html">Continue Shopping</a></div>
+<div style="margin-top:12px;text-align:right"><button class="btn-action btn-secondary btn-buy">Acheter</button><a class="btn-action btn-primary" href="index.html">Continue Shopping</a></div>
 </main>
 <footer class="footer">© GRIND PRO</footer>
 <script>document.addEventListener('DOMContentLoaded',function(){renderCart(document.getElementById('cart-body'),document.getElementById('cart-total'));});</script>
